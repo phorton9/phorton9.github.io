@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Chemical Engineering, Auburn University, 2021
+* B.S. in Chemical Engineering, Auburn University, 2011
 * M.B.A. University of South Carolina, 2018
 * M.S. in Analytics, Georgia Tech, 2021
 * Ph.D in Machine Learning, Geogria Tech, 2027 (expected)
