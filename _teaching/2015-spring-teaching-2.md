@@ -1,20 +1,11 @@
 ---
-title: "Teaching experience 2"
+title: "ISYE7406 - Data Mining and Statistical Learning"
 collection: teaching
-type: "Workshop"
+type: "Head Teaching Assistant"
 permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+venue: "Georgia Tech, ISYE"
+date: 2021-09-01
+location: "Atlanta, GA"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
-
-Heading 1
-======
-
-Heading 2
-======
-
-Heading 3
-======
+Graded homework and exams. Held office hours and answered questions online.
