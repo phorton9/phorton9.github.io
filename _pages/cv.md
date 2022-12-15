@@ -18,24 +18,26 @@ Education
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2021 - 2022
+  * Georgia Tech
+  * Duties included: Grading homework, exams, and providing feedback to students. Holding office hours and answering questions online.
+  * Supervisor: Dr. Yajun Mei
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2021 - 2022
+  * Sales and Forecasting Analyst
+  * Duties included: Generate sales forecasting model. Build forecasting data pipeline. Create sales reports.
+
   
-Skills
+Certifications
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Lean Six Sigma Green Belt.
+* Microsoft
+  * Data Visualization in Power BI
+  * Azure Fundamentals
+* Toastmasters
+  *  Competent Communicator
+  *  Competent Leader
+* French Intermediate - Niveau B1-B2 by Ecole Polyechnique
 
 Publications
 ======
