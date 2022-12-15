@@ -11,9 +11,10 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Chemical Engineering, Auburn University, 2021
+* M.B.A. University of South Carolina, 2018
+* M.S. in Analytics, Georgia Tech, 2021
+* Ph.D in Machine Learning, Geogria Tech, 2027 (expected)
 
 Work experience
 ======
