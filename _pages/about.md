@@ -18,7 +18,7 @@ Personally
 ======
 I was born and raised in Birmingham, AL as the youngest of three boys. I stayed in the state and went to undergrad at Auburn University. After graduating, I moved to South Carolina and spent ~7 years there. Next, I moved to Seattle, WA for two years before moving back to the Southeast. I got married during the pandemic and my wife and I had our first child, Eleanor, in August 2021. My wife is pregnant again and due in May of 2023. We bought a house in the Southwest part of Atlanta in a neighborhood called Venetian Hills. We have a dog and cat so we have a full house. 
 
-Fun-Fact - J'ai lu le series de Harry Potter en Francais. Je ai appris le Francais quand je travaillais chez Michelin and je continue de le practiquer. 
+Fun-Fact - J'ai lu la serie de Harry Potter en Francais. Je ai appris le Francais quand je travaillais chez Michelin and je continue de le practiquer. 
 
 Hobbies
 ------
