@@ -8,6 +8,9 @@ tags:
   - category2
 ---
 
+$$\theta$$
+
+
 <br/><img src='/images/BDHS-Case-Competition-2021.png'>
 
 This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
