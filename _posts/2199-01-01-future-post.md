@@ -16,7 +16,7 @@ Consider the scenario where you have observed data $$x_1...x_n$$ from a given fu
 
 If you are familiar with regression, you have likely seen the squared error loss function $$L(\theta, \delta) = (\theta – \delta)^2$$. Here, theta what you are estimating and delta is the estimator. For the squared error loss, estimates further away from the actual value of theta incur a relatively larger penalty than estimates close to the true value. Another example of a loss function is the absolute loss $$L(\theta, \delta) = |\theta – \delta|$$ which has different characteristics than the squared error loss that are not so important for this post. To put it simply, the purpose of a loss function is to penalize bad guesses. There is no “right” answer for which loss function to chose as it is contextual and depends on the specific problem. 
 
-Now that we have a way of measuring performance, we can talk about the risk function which is the way of quantifying the quality of an estimator. The risk function for an estimator and loss function is defined as the expected value of the loss function for a given $$\theta$$:
+Now that we have a way of measuring performance, we can talk about the risk function which is the way of quantifying the quality of an estimator. The risk function for an estimator and loss function is defined as the expected value of the loss function for a given theta:
 
 $$R(\theta, \delta) = E_\theta[L(\theta, \delta(X)]$$
 
@@ -28,7 +28,16 @@ $$R_]delta(\theta) = (]theta – E[]delta])^2 + var(\delta)$$
 
 Let’s revisit the original example where $$x_1...x_n ~ Norm(\theta,10)$$ where we are using a squared error loss function. We will evaluate the following estimators:
 
-$$Delta_1 = \bar{X}$$
+$$\delta_1 = \bar{x}
+
+\delta_2 = 2
+\delta_3 = 2\bar{x} + 1$$
+
+The first estimator uses the mean of the observations, the second guesses 2 regardless of the observations, and the third uses a multiple of the mean with an added constant. The expected value of the mean for a N(theta,1) distribution is theta with variance 1/n. The expected value of 2*x_bar is 2theta with variance 4/n given by the fact that var(2x) = 4*var(x). Therefore, the risk functions using these estimators are:
+
+$$R1 = 1/n
+R2 = (\theta – 2)^2
+R3 = (\theta – 2\theta)^2 + 4/n = \theta^2 + 4/n$$
 
 
 <br/><img src='/images/Risk.png'>
