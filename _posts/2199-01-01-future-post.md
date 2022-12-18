@@ -10,7 +10,7 @@ tags:
 
 Don’t be fooled by the title of my first blog post because I am not going to be reviewing any movies. Instead, I will explain risk functions and their role in statistical decision theory. Risk functions are a tool for determining under what conditions an estimator is better than another. The goal of machine learning algorithms is to minimize the risk (or expected loss), so it is an important concept to understand. In this post, I will start by describing the concept at a basic level and what you need to calculate the risk function, then I will show example risk functions, and finally I will cover admissibility and how it relates to this topic.
 
-Consider the scenario where you have observed data $x_1...x_n$ from a given function $f(x|\theta)$ where the function is known but theta is unknown. You could have $x_1...x_n ~ Norm(\theta,10)$ or another type of random variable. You want to use the data you have to determine the best estimator* of theta. Before even considering that, you must determine how you are going to measure the performance of the estimator which leads us to the concept of loss functions. 
+Consider the scenario where you have observed data $x_1...x_n$ from a given function $f(x|\theta)$ where the function is known but theta is unknown. You could have $x_1...x_n$ ~ $Norm(\theta,10)$ or another type of random variable. You want to use the data you have to determine the best estimator* of theta. Before even considering that, you must determine how you are going to measure the performance of the estimator which leads us to the concept of loss functions. 
 
 *Note* I use the term estimator but others use the term procedure or decision rule. 
 
@@ -34,13 +34,13 @@ $$\delta_2 = 2$$
 
 $$\delta_3 = 2\bar{x} + 1$$
 
-The first estimator uses the mean of the observations, the second guesses 2 regardless of the observations, and the third uses a multiple of the mean with an added constant. The expected value of the mean for a $N(\theta,1)$ distribution is theta with variance 1/n. The expected value of $2*\bar{x}$ is $2\theta$ with variance 4/n given by the fact that var(2x) = 4*var(x). Therefore, the risk functions using these estimators are:
+The first estimator uses the mean of the observations, the second guesses 2 regardless of the observations, and the third uses a multiple of the mean with an added constant. The expected value of the mean for a $Norm(\theta,10)$ distribution is theta with variance 10/n. The expected value of $2*\bar{x}$ is $2\theta$ with variance 40/n given by the fact that var(2x) = 4*var(x). Therefore, the risk functions using these estimators are:
 
-$$R1 = 1/n$$
+$$R1 = 10/n$$
 
 $$R2 = (\theta – 2)^2$$
 
-$$R3 = (\theta – 2\theta)^2 + 4/n = \theta^2 + 4/n$$
+$$R3 = (\theta – 2\theta)^2 + 40/n = \theta^2 + 40/n$$
 
 <br/><img src='/images/Risk.png'>
 
