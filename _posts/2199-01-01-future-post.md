@@ -1,16 +1,22 @@
 ---
-title: 'Conformal Inference'
+title: 'Risky Business'
 date: 2022-12-01
-permalink: /posts/2022/12/ConformalInference/
+permalink: /posts/2022/12/RiskyBusiness/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - staitistical decision theory
+  - risk functions
+  - loss functions
 ---
 
-$$\theta$$
+Don’t be fooled by the title of my first blog post because I am not going to be reviewing any movies. Instead, I will explain risk functions and their role in statistical decision theory. Risk functions are a tool for determining under what conditions an estimator is better than another. The goal of machine learning algorithms is to minimize the risk (or expected loss), so it is an important concept to understand. In this post, I will start by describing the concept at a basic level and what you need to calculate the risk function, then I will show example risk functions, and finally I will cover admissibility and how it relates to this topic.
+
+Consider the scenario where you have observed data $$x_1...x_n$$ from a given function $$f(x|\theta) where the function is known but theta is unknown. You could have $$x_1...x_n ~ Norm(\theta,10)$$ or another type of random variable. You want to use the data you have to determine the best estimator* of theta. Before even considering that, you must determine how you are going to measure the performance of the estimator which leads us to the concept of loss functions. 
+
+*Note* I use the term estimator but others use the term procedure or decision rule. 
+
+If you are familiar with regression, you have likely seen the squared error loss function L(theta, delta) = (theta – delta)^2. Here, theta what you are estimating and delta is the estimator. For the squared error loss, estimates further away from the actual value of theta incur a relatively larger penalty than estimates close to the true value. Another example of a loss function is the absolute loss L(theta, delta) = abs(theta – delta) which has different characteristics than the squared error loss that are not so important for this post. To put it simply, the purpose of a loss function is to penalize bad guesses. There is no “right” answer for which loss function to chose as it is contextual and depends on the specific problem. 
 
 
-<br/><img src='/images/BDHS-Case-Competition-2021.png'>
+<br/><img src='/images/Risk.png'>
 
 This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
