@@ -24,19 +24,18 @@ Ideally, you would have an estimator that has low risk for all values of theta b
 
 For the squared error loss function, the expected value of the loss (risk) can be decomposed into two parts: bias and variance. You have possibly seen the definition of $$var(x) = E[x^2] – E[x]^2$$ which is what you have with this risk function given that theta is considered as a constant. If you rearrange that formula, you have $$E[x^2] = var(x) + E[x]^2$$. Replace x with $$(\theta – \delta)$$ and you have the bias $$(E[\theta – \delta])$$ and variance. Theta is constant so this becomes:
 
-$$R_]delta(\theta) = (]theta – E[]delta])^2 + var(\delta)$$
+$$R_]delta(\theta) = (\theta – E[\delta])^2 + var(\delta)$$
 
 Let’s revisit the original example where $$x_1...x_n ~ Norm(\theta,10)$$ where we are using a squared error loss function. We will evaluate the following estimators:
 
-$$\delta_1 = \bar{x}
-
-\delta_2 = 2
+$$\delta_1 = \bar{x}\\
+\delta_2 = 2\\
 \delta_3 = 2\bar{x} + 1$$
 
 The first estimator uses the mean of the observations, the second guesses 2 regardless of the observations, and the third uses a multiple of the mean with an added constant. The expected value of the mean for a N(theta,1) distribution is theta with variance 1/n. The expected value of 2*x_bar is 2theta with variance 4/n given by the fact that var(2x) = 4*var(x). Therefore, the risk functions using these estimators are:
 
-$$R1 = 1/n
-R2 = (\theta – 2)^2
+$$R1 = 1/n\\
+R2 = (\theta – 2)^2\\
 R3 = (\theta – 2\theta)^2 + 4/n = \theta^2 + 4/n$$
 
 
