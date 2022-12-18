@@ -22,11 +22,11 @@ $$R(\theta, \delta) = E_\theta[L(\theta, \delta(X)]$$
 
 Ideally, you would have an estimator that has low risk for all values of theta but, like almost everything, there is a performance tradeoff. There is no estimator that is the best under all scenarios. 
 
-For the squared error loss function, the expected value of the loss (risk) can be decomposed into two parts: bias and variance. You have possibly seen the definition of $$var(x) = E[x^2] – E[x]^2$$ which is what you have with this risk function given that theta is considered as a constant. If you rearrange that formula, you have $$E[x^2] = var(x) + E[x]^2$$. Replace x with $$(\theta – \delta)$$ and you have the bias $$(E[\theta – \delta])$$ and variance. Theta is constant so this becomes:
+For the squared error loss function, the expected value of the loss (risk) can be decomposed into two parts: bias and variance. You have possibly seen the definition of $$var(x) = E[x^2] – E[x]^2$$ which is what you have with this risk function given that theta is considered as a constant. If you rearrange that formula, you have $E[x^2] = var(x) + E[x]^2$. Replace x with $(\theta – \delta)$ and you have the bias $(E[\theta – \delta])$ and variance. Theta is constant so this becomes:
 
-$$R_]delta(\theta) = (\theta – E[\delta])^2 + var(\delta)$$
+$$R_delta(\theta) = (\theta – E[\delta])^2 + var(\delta)$$
 
-Let’s revisit the original example where $$x_1...x_n ~ Norm(\theta,10)$$ where we are using a squared error loss function. We will evaluate the following estimators:
+Let’s revisit the original example where $x_1...x_n ~ Norm(\theta,10)$ where we are using a squared error loss function. We will evaluate the following estimators:
 
 $$\delta_1 = \bar{x}$$
 
@@ -41,6 +41,16 @@ $$R1 = 1/n$$
 $$R2 = (\theta – 2)^2$$
 
 $$R3 = (\theta – 2\theta)^2 + 4/n = \theta^2 + 4/n$$
+
+You can see there are values of theta for which delta_2 is the best estimator and other values where delta_1 is the best estimator. You should also notice that there are no values for which delta_3 is the optimal estimator. In fact, it is universally worse than delta_1 which brings me to the final part of this post – the concept of admissibility.
+An estimator, delta’, is considered inadmissible if there exists another estimator, delta*, for which:
+a)	R_delta’(theta) >= R_delta*(theta) for all theta in Omega
+b)	R_delta’(theta) > R_delta*(theta) for at least one theta in Omega
+You can also show that an estimator is admissible by showing it is Bayes optimal for a given prior but that is another topic for another time.
+
+
 <br/><img src='/images/Risk.png'>
+
+
 
 This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
