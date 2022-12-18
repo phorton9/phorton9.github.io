@@ -47,8 +47,8 @@ $$R3 = (\theta – 2\theta)^2 + 40/n = \theta^2 + 40/n$$
 You can see there are values of $\theta$ for which $\delta_2$ is the best estimator and other values where $\delta_1$ is the best estimator. You should also notice that there are no values for which $\delta_3$ is the optimal estimator. In fact, it is universally worse than $\delta_1$ which brings me to the final part of this post – the concept of admissibility.
 
 An estimator, $\delta’$, is considered inadmissible if there exists another estimator, $delta*$, for which:
-$$a)	R_{\delta’}(\theta) >= R_{\delta*}(\theta) \hspace{5em} \forall \theta \in \Omega$$
-$b)	R_{\delta’}(\theta) > R_{\delta*}(\theta)$ for at least one $\theta in \Omega$
+$$a)	R_{\delta’}(\theta) >= R_{\delta*}(\theta) \hspace{2em} \forall \theta \in \Omega$$
+$$b)	R_{\delta’}(\theta) > R_{\delta*}(\theta)$$ for at least one $\theta \in \Omega$
 
 You can also show that an estimator is admissible by showing it is Bayes optimal for a given prior but that is another topic for another time.
 
