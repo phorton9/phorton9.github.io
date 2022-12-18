@@ -49,6 +49,7 @@ You can see there are values of $\theta$ for which $\delta_2$ is the best estima
 An estimator, $\delta’$, is considered inadmissible if there exists another estimator, $delta*$, for which:
 
 $a)	R_{\delta’}(\theta) >= R_{\delta*}(\theta) \hspace{2em} \forall \theta \in \Omega$
+
 $b)	R_{\delta’}(\theta) > R_{\delta*}(\theta)$ for at least one $\theta \in \Omega$
 
 You can also show that an estimator is admissible by showing it is Bayes optimal for a given prior but that is another topic for another time.
