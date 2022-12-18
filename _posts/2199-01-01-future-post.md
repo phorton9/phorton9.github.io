@@ -14,7 +14,21 @@ Consider the scenario where you have observed data $$x_1...x_n$$ from a given fu
 
 *Note* I use the term estimator but others use the term procedure or decision rule. 
 
-If you are familiar with regression, you have likely seen the squared error loss function $$L(\theta, \delta) = (\theta – \delta)^2$$. Here, theta what you are estimating and delta is the estimator. For the squared error loss, estimates further away from the actual value of theta incur a relatively larger penalty than estimates close to the true value. Another example of a loss function is the absolute loss $$L(\theta, \delta) = \abs(theta – delta)$$ which has different characteristics than the squared error loss that are not so important for this post. To put it simply, the purpose of a loss function is to penalize bad guesses. There is no “right” answer for which loss function to chose as it is contextual and depends on the specific problem. 
+If you are familiar with regression, you have likely seen the squared error loss function $$L(\theta, \delta) = (\theta – \delta)^2$$. Here, theta what you are estimating and delta is the estimator. For the squared error loss, estimates further away from the actual value of theta incur a relatively larger penalty than estimates close to the true value. Another example of a loss function is the absolute loss $$L(\theta, \delta) = |\theta – \delta|$$ which has different characteristics than the squared error loss that are not so important for this post. To put it simply, the purpose of a loss function is to penalize bad guesses. There is no “right” answer for which loss function to chose as it is contextual and depends on the specific problem. 
+
+Now that we have a way of measuring performance, we can talk about the risk function which is the way of quantifying the quality of an estimator. The risk function for an estimator and loss function is defined as the expected value of the loss function for a given $$\theta$$:
+
+$$R(\theta, \delta) = E_\theta[L(\theta, \delta(X)]$$
+
+Ideally, you would have an estimator that has low risk for all values of theta but, like almost everything, there is a performance tradeoff. There is no estimator that is the best under all scenarios. 
+
+For the squared error loss function, the expected value of the loss (risk) can be decomposed into two parts: bias and variance. You have possibly seen the definition of $$var(x) = E[x^2] – E[x]^2$$ which is what you have with this risk function given that theta is considered as a constant. If you rearrange that formula, you have $$E[x^2] = var(x) + E[x]^2$$. Replace x with $$(\theta – \delta)$$ and you have the bias $$(E[\theta – \delta])$$ and variance. Theta is constant so this becomes:
+
+$$R_]delta(\theta) = (]theta – E[]delta])^2 + var(\delta)$$
+
+Let’s revisit the original example where $$x_1...x_n ~ Norm(\theta,10)$$ where we are using a squared error loss function. We will evaluate the following estimators:
+
+$$Delta_1 = \bar{X}$$
 
 
 <br/><img src='/images/Risk.png'>
