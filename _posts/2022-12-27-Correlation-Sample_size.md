@@ -44,6 +44,7 @@ var(X_j) & cov(X_j,Y_j)\\
 cov(Y_j,X_j) & var(Y_j)
 \end{array}\right)
 $$ 
+
 $$
 \left(\begin{array}{cc} 
 \mathbf{E}[X_j]\\
