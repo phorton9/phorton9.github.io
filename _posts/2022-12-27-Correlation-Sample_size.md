@@ -8,8 +8,9 @@ tags:
 ---
 You will find correlations as a part of analyses in papers across all fields of research. They are simple ways to understand the relationship between variables. They can be put into matrix for all variables within a dataset and visualized such as in Figure 1 below. One  In this post, I will describe a method for determining the number of samples you will need for a statistically significant correlation given a type I error rate $\left(\alpha\right)$ and type II error rate $\left(\beta\right)$.
 
-<br/><img src='/images/Correlation.png' width="300" alt="alt attribute goes here!" title="This is a Title">
-
+<p align="center">
+  <br/><img src='/images/Correlation.png' width="300" alt="alt attribute goes here!" title="This is a Title">
+</p>
 
 Consider the general scenario where we have variables X and Y which have a correlation $r$. We will use the standard definition of the Pearson correlation for our discussion:
 $$\text{Correlation} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{\mathbf{E}[XY] - \mathbf{E}[X]\mathbf{E}[Y]}{\sqrt{(\mathbf{E}[X^2]-\mathbf{E}[X]^2)(\mathbf{E}[Y^2] - \mathbf{E}[Y]^2)}}$$
@@ -59,16 +60,58 @@ $$
 $$
 
 We have a two subgroup example shown in figure 2 below where:
+
 $$
-\Sigma_1 = \begin{bmatrix}{}
-1 & -0.8 \\
+\Sigma_1 = \begin{bmatrix}{} 
+1 & -0.8\\
 -0.8 & 1
+\end{bmatrix}       \hspace{2cm}
+\mu_1 = \begin{bmatrix}
+    1 \\
+    4
+\end{bmatrix}
+$$ 
+
+$$
+\Sigma_2 = \begin{bmatrix}
+    1 & 0.8 \\
+    0.8 & 1
 \end{bmatrix} \hspace{1cm}
-\mu_1 = \begin{bmatrix}{}
-1 \\
-4
+\mu_2 = \begin{bmatrix}
+    2 \\
+    2
 \end{bmatrix}
 $$
+
+<p align="center">
+  <br/><img src='/images/Cor8-8MeanDif.png' width="300" alt="alt attribute goes here!" title="Correlation for Subgroups with Different Means">
+</p>
+
+Both subgroups have 100 samples and the combined sample correlation is -0.32. The correlation is driven by the difference in sample means between the two subgroups. If we standardize both subgroups where:
+
+$$
+\mu_1 = \begin{bmatrix}
+    0 \\
+    0
+\end{bmatrix} \hspace{1cm}
+\mu_2 = \begin{bmatrix}
+    0 \\
+    0
+\end{bmatrix}
+$$
+
+We have sample correlation of 0. We did not need to standardize the variances since $var(X_1) = var(X_2) = var(Y_1) = var(Y_2) = 1$. 
+
+With a standardized sample and subgroups, $\mathbf{E}[X] = \mathbf{E}[Y] = 0$ and the formula for the sample correlation becomes:
+$$
+r = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$$
+$$= \mathbf{E}[XY] = \sum_{i=1}^n(x_i)(y_i) = \sum_{j=1}^K\sum_{i=1}^{n_j}(x_{ij})(y_{ij})$$
+Where $x_{ij}$ and $y_{ij}$ are the $i-th$ observation from the $j-th$ subgroup. This is the weighted average of the covariance of the subgroups.
+
+<p align="center">
+    <br/><img align = "center" src='/images/Cor8-8MeanSame.png' width="300" alt="alt attribute goes here!" title="Correlation for Subgroups with Equal Means">
+</p>
+
 
 This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
  
