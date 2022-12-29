@@ -15,7 +15,7 @@ We want to find the number of measurements we need if we expect a correlation of
 $$H_0: r \leq r_0 $$
 $$H_1: r > r_0 $$
 
-$\sum_{x = a}^{b} f(x)$
+$\sum_{i=1}^{10} t_i$
 
 
 
