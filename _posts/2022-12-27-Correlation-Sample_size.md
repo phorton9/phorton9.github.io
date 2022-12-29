@@ -13,8 +13,8 @@ $$\text{Correlation} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{\mathbf{E}[X
 $$=\frac{\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^n(x_i-\bar{x})^2\sum_{i=1}^n(y_i-\bar{y})^2}}$$
 
 We want to find the number of measurements we need if we expect a correlation of $r$ and we have a type I error rate of $\alpha$ and type II error rate of $\beta$. Under these conditions, we can structure the hypothesis as:
-$$H_0: r \leq r_0\\
-H_1: r > r_0$$
+$$ H_0: r \leq r_0\\
+H_1: r > r_0 $$
 
 
 
