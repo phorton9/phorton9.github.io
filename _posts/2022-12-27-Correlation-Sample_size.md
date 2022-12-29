@@ -103,8 +103,7 @@ $$
 We have sample correlation of 0. We did not need to standardize the variances since $var(X_1) = var(X_2) = var(Y_1) = var(Y_2) = 1$. 
 
 With a standardized sample and subgroups, $\mathbf{E}[X] = \mathbf{E}[Y] = 0$ and the formula for the sample correlation becomes:
-$$
-r = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$$
+$$r = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$$
 $$= \mathbf{E}[XY] = \sum_{i=1}^n(x_i)(y_i) = \sum_{j=1}^K\sum_{i=1}^{n_j}(x_{ij})(y_{ij})$$
 Where $x_{ij}$ and $y_{ij}$ are the $i-th$ observation from the $j-th$ subgroup. This is the weighted average of the covariance of the subgroups.
 
