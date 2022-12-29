@@ -15,6 +15,8 @@ $$=\frac{\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^n(x_i-\bar{x})
 We want to find the number of measurements we need if we expect a correlation of $r$ and we have a type I error rate of $\alpha$ and type II error rate of $\beta$. Under these conditions, we can structure the hypothesis as:
 $$H_0: r \leq r_0\\
 H_1: r > r_0$$
+
+
 We setup this test to reject the null hypothesis that the correlation is under a threshold once we have sufficient data. We define $r'$ as the sample correlation, $r_0$ as the test correlation, and $r$ as the true correlation.
 $$\beta = \text{P(Type II Error) = P(Fail to Reject } H_0 \mid H_0 \text{ is False})\\
 =P(Z_0 \leq Z_\alpha \mid r > r_0) = P(\frac{atanh(r') - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha) \\
