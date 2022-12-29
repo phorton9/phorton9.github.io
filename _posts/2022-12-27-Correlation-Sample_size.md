@@ -10,6 +10,13 @@ You will find correlations as a part of analyses in papers across all fields of 
 
 <br/><img src='/images/Correlation.png' width="300" alt="alt attribute goes here!" title="This is a Title">
 
+<img src=
+'/images/Correlation.png' 
+     alt="gfglogo" style="width:50%">
+
+    <figcaption>GeeksforGeeks Logo</figcaption>
+</figure>
+
 Consider the general scenario where we have variables X and Y which have a correlation $r$. We will use the standard definition of the Pearson correlation for our discussion:
 $$\text{Correlation} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{\mathbf{E}[XY] - \mathbf{E}[X]\mathbf{E}[Y]}{\sqrt{(\mathbf{E}[X^2]-\mathbf{E}[X]^2)(\mathbf{E}[Y^2] - \mathbf{E}[Y]^2)}}$$
 $$=\frac{\sum_{i=1} (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1} (x_i-\bar{x})^2\sum_{i=1} (y_i-\bar{y})^2}}$$
