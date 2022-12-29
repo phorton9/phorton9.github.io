@@ -13,7 +13,8 @@ You will find correlations as a part of analyses in papers across all fields of 
 </p>
 
 Consider the general scenario where we have variables X and Y which have a correlation $r$. We will use the standard definition of the Pearson correlation for our discussion:
-$$\text{Correlation} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{\mathbf{E}[XY] - \mathbf{E}[X]\mathbf{E}[Y]}{\sqrt{(\mathbf{E}[X^2]-\mathbf{E}[X]^2)(\mathbf{E}[Y^2] - \mathbf{E}[Y]^2)}}$$
+$$\text{Correlation} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}$$
+$$= \frac{\mathbf{E}[XY] - \mathbf{E}[X]\mathbf{E}[Y]}{\sqrt{(\mathbf{E}[X^2]-\mathbf{E}[X]^2)(\mathbf{E}[Y^2] - \mathbf{E}[Y]^2)}}$$
 $$=\frac{\sum_{i=1} (x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1} (x_i-\bar{x})^2\sum_{i=1} (y_i-\bar{y})^2}}$$
 
 Under these conditions, we can structure the hypothesis as:
@@ -23,10 +24,10 @@ $$H_1: r > r_0 $$
 We setup this test to reject the null hypothesis that the correlation is under a threshold once we have sufficient data. We define $r'$ as the sample correlation, $r_0$ as the test correlation, and $r$ as the true correlation.
 $$\beta = \text{P(Type II Error) = P(Fail to Reject } H_0 \mid H_0 \text{ is False})$$
 $$=P(Z_0 \leq Z_\alpha \mid r > r_0) = P(\frac{atanh(r') - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha)$$
-$$= P(\frac{atanh(r') - atanh(r)}{\sqrt{n-3}} + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha) = P(Z \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
-
-
-$$\beta =P(Norm(0,1) \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}}) = \Phi(Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
+$$= P(\frac{atanh(r') - atanh(r)}{\sqrt{n-3}} + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha)$$
+$$= P(Z \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
+$$\beta =P(Norm(0,1) \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})
+$$= \Phi(Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
 
 Given by the Fisher's z-transformation where $atanh(r') = \frac{1}{2}\ln(\frac{1+r'}{1-r'})$ is normally distributed with mean $atanh(r)$ and variance $\frac{1}{n-3}$. We can then say:
 $$-Z_\beta = \Phi^{-1}(\beta) = Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}}$$
@@ -60,7 +61,6 @@ $$
 $$
 
 We have a two subgroup example shown in figure 2 below where:
-
 $$
 \Sigma_1 = \begin{bmatrix}{} 
 1 & -0.8\\
@@ -71,7 +71,6 @@ $$
     4
 \end{bmatrix}
 $$ 
-
 $$
 \Sigma_2 = \begin{bmatrix}
     1 & 0.8 \\
