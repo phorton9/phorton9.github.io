@@ -38,15 +38,17 @@ $$n =  \lceil \left(\frac{1.645 + 1.282}{0.3596}\right)^2 + 3 \rceil = \lceil 69
 We can also consider the case when $r_0 = 0$ where we want to show that a correlation is positive. We will keep $\alpha = 0.05$ and $\beta = 0.1$ but modify our expectation for the true correlation value to be $r = 0.5$. In this scenario, we have:
 $$n = \lceil \left(\frac{1.645 + 1.282}{0.549}\right)^2 + 3 \rceil = \lceil 31.4 \rceil \approx 32$$
 
+Now, consider the scenario where we have subgroups $j=1...K$ within a population that have covariance matrices
+
 $$
-\left(\begin{array}{cc} 
+\Sigma_i = \left(\begin{bmatrix}{} 
 var(X_j) & cov(X_j,Y_j)\\
 cov(Y_j,X_j) & var(Y_j)
-\end{array}\right)
+\end{bmatrix}\right)
 $$ 
 
 $$
-\left(\begin{bmatrix}{cc} 
+\left(\begin{bmatrix}{} 
 \mathbf{E}[X_j]\\
 \mathbf{E}[Y_j]
 \end{bmatrix}\right)
