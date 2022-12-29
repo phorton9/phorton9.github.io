@@ -26,7 +26,7 @@ $$\beta = \text{P(Type II Error) = P(Fail to Reject } H_0 \mid H_0 \text{ is Fal
 $$=P(Z_0 \leq Z_\alpha \mid r > r_0) = P(\frac{atanh(r') - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha)$$
 $$= P(\frac{atanh(r') - atanh(r)}{\sqrt{n-3}} + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha)$$
 $$= P(Z \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
-$$\beta =P(Norm(0,1) \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})
+$$= P(Norm(0,1) \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
 $$= \Phi(Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
 
 Given by the Fisher's z-transformation where $atanh(r') = \frac{1}{2}\ln(\frac{1+r'}{1-r'})$ is normally distributed with mean $atanh(r)$ and variance $\frac{1}{n-3}$. We can then say:
@@ -61,6 +61,7 @@ $$
 $$
 
 We have a two subgroup example shown in figure 2 below where:
+
 $$
 \Sigma_1 = \begin{bmatrix}{} 
 1 & -0.8\\
@@ -71,6 +72,7 @@ $$
     4
 \end{bmatrix}
 $$ 
+
 $$
 \Sigma_2 = \begin{bmatrix}
     1 & 0.8 \\
@@ -81,7 +83,6 @@ $$
     2
 \end{bmatrix}
 $$
-
 <p align="center">
   <br/><img src='/images/Cor8-8MeanDif.png' width="300" alt="alt attribute goes here!" title="Correlation for Subgroups with Different Means">
 </p>
