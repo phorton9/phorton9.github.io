@@ -41,25 +41,19 @@ $$n = \lceil \left(\frac{1.645 + 1.282}{0.549}\right)^2 + 3 \rceil = \lceil 31.4
 Now, consider the scenario where we have subgroups $j=1...K$ within a population that have covariance matrices
 
 $$
-\Sigma_i = \left(\begin{bmatrix}{} 
+\Sigma_i = \begin{bmatrix}{} 
 var(X_j) & cov(X_j,Y_j)\\
 cov(Y_j,X_j) & var(Y_j)
-\end{bmatrix}\right)
+\end{bmatrix}
 $$ 
 
 $$
-\left(\begin{bmatrix}{} 
+\mu_j = \begin{bmatrix}{} 
 \mathbf{E}[X_j]\\
 \mathbf{E}[Y_j]
-\end{bmatrix}\right)
+\end{bmatrix}
 $$
+We have a two subgroup example shown in figure 1 below where:
 
-Now, consider the scenario where we have subgroups $j=1...K$ within a population that have covariance matrices $\Sigma_i = \begin{bmatrix}
-    var(X_j) & cov(X_j,Y_j) \\
-    cov(Y_j,X_j) & var(Y_j)
-\end{bmatrix}$ and mean $\mu_j = \begin{bmatrix}
-    \mathbf{E}[X_j] \\
-    \mathbf{E}[Y_j]
-\end{bmatrix}$. We have a two subgroup example shown in figure 1 below where:
 This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
  
