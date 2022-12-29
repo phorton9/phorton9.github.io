@@ -19,7 +19,7 @@ We setup this test to reject the null hypothesis that the correlation is under a
 $$\beta = \text{P(Type II Error) = P(Fail to Reject } H_0 \mid H_0 \text{ is False})\\
 =P(Z_0 \leq Z_\alpha \mid r > r_0) = P(\frac{atanh(r') - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha) \\
 = P(\frac{atanh(r') - atanh(r)}{\sqrt{n-3}} + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha) = P(Z \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})\\
-\beta =P(Norm(0,1) \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}}) = \Phi(Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})
+\beta =P(Norm(0,1) \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}}) = \Phi(Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
 
 
 
