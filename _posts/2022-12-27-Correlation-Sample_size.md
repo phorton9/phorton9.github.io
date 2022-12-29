@@ -111,6 +111,4 @@ Where $x_{ij}$ and $y_{ij}$ are the $i-th$ observation from the $j-th$ subgroup.
     <br/><img align = "center" src='/images/Cor8-8MeanSame.png' width="300" alt="alt attribute goes here!" title="Correlation for Subgroups with Equal Means">
 </p>
 
-
-This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
  
