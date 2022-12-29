@@ -9,7 +9,7 @@ tags:
 You will find correlations as a part of analyses in papers across all fields of research. They are simple ways to understand the relationship between variables. They can be put into matrix for all variables within a dataset and visualized such as in Figure 1 below. One  In this post, I will describe a method for determining the number of samples you will need for a statistically significant correlation given a type I error rate $\left(\alpha\right)$ and type II error rate $\left(\beta\right)$.
 
 <br/><img src='/images/Correlation.png' width="300" alt="alt attribute goes here!" title="This is a Title">
-
+<figure>
 <img src=
 '/images/Correlation.png' 
      alt="gfglogo" style="width:50%">
