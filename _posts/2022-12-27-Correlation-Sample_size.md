@@ -10,7 +10,7 @@ tags:
 
 Consider the general scenario where we have variables X and Y which have a correlation $r$. We will use the standard definition of correlation for our discussion:
 $$\text{Correlation} = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{\mathbf{E}[XY] - \mathbf{E}[X]\mathbf{E}[Y]}{\sqrt{(\mathbf{E}[X^2]-\mathbf{E}[X]^2)(\mathbf{E}[Y^2] - \mathbf{E}[Y]^2)}}$$
-$$=\frac{\sum_{i=1}^n(x_i-\Bar{x})(y_i-\Bar{y})}{\sqrt{\sum_{i=1}^n(x_i-\Bar{x})^2\sum_{i=1}^n(y_i-\Bar{y})^2}}$$
+$$=\frac{\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^n(x_i-\bar{x})^2\sum_{i=1}^n(y_i-\bar{y})^2}}$$
 
 
 
