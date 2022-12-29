@@ -61,12 +61,12 @@ $$
 We have a two subgroup example shown in figure 2 below where:
 $$
 \Sigma_1 = \begin{bmatrix}
-    1 & -0.8 \\
-    -0.8 & 1
+1 & -0.8 \\
+-0.8 & 1
 \end{bmatrix} \hspace{1cm}
 \mu_1 = \begin{bmatrix}
-    1 \\
-    4
+1 \\
+4
 \end{bmatrix}
 $$
 
