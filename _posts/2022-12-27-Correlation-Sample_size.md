@@ -40,14 +40,16 @@ $$n = \lceil \left(\frac{1.645 + 1.282}{0.549}\right)^2 + 3 \rceil = \lceil 31.4
 
 $$
 \left(\begin{array}{cc} 
-0.8944272 & 0.4472136\\
--0.4472136 & -0.8944272
-\end{array}\right)
-\left(\begin{array}{cc} 
-10 & 0\\ 
-0 & 5
+var(X_j) & cov(X_j,Y_j)\\
+cov(Y_j,X_j) & var(Y_j)
 \end{array}\right)
 $$ 
+$$
+\left(\begin{array}{cc} 
+\mathbf{E}[X_j]\\
+\mathbf{E}[Y_j]
+\end{array}\right)
+$$
 
 Now, consider the scenario where we have subgroups $j=1...K$ within a population that have covariance matrices $\Sigma_i = \begin{bmatrix}
     var(X_j) & cov(X_j,Y_j) \\
