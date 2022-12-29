@@ -46,10 +46,10 @@ cov(Y_j,X_j) & var(Y_j)
 $$ 
 
 $$
-\left(\begin{array}{cc} 
+\left(\begin{bmatrix}{cc} 
 \mathbf{E}[X_j]\\
 \mathbf{E}[Y_j]
-\end{array}\right)
+\end{bmatrix}\right)
 $$
 
 Now, consider the scenario where we have subgroups $j=1...K$ within a population that have covariance matrices $\Sigma_i = \begin{bmatrix}
