@@ -6,7 +6,7 @@ tags:
   - Correlation
   - Sample Size
 ---
-You will find correlations as a part of analyses in papers across all fields of research. They are simple ways to understand the relationship between variables. They can be put into matrix for all variables within a dataset and visualized such as in Figure 1 below. One  In this post, I will describe a method for determining the number of samples you will need for a statistically significant correlation given a type I error rate $\left(\alpha\right)$ and type II error rate $\left(\beta\right)$.
+You will find correlations as a part of analyses in papers across all fields of research. They are simple ways to understand the relationship between variables. They can be put into matrix for all variables within a dataset and visualized such as in the heatmap below. An additional way to use correlations is in the planning stage of a study or trial. You can use the expected value of the correlation to determine the number of samples/observations you will need. In this post, I will describe a method for determining the number of samples you will need for a statistically significant correlation given a type I error rate $\left(\alpha\right)$ and type II error rate $\left(\beta\right)$. I will also discuss the implications for having subgroups within a population and the relationship they have to the combined sample correlation.
 
 <p align="center">
   <br/><img src='/images/Correlation.png' width="300" alt="alt attribute goes here!" title="This is a Title">
@@ -21,16 +21,16 @@ Under these conditions, we can structure the hypothesis as:
 $$H_0: r \leq r_0 $$
 $$H_1: r > r_0 $$
 
-We setup this test to reject the null hypothesis that the correlation is under a threshold once we have sufficient data. We define $r'$ as the sample correlation, $r_0$ as the test correlation, and $r$ as the true correlation.
+We setup this test to reject the null hypothesis that the correlation is under a threshold once we have sufficient data. We define $r'$ as the sample correlation, $r_0$ as the test correlation, and $r$ as the true correlation. By definition, $\beta$ is the probability of committing a type II error or failing to reject the null hypothesis given that the null hypothesis is wrong. This leads us to derive:
 $$\beta = \text{P(Type II Error) = P(Fail to Reject } H_0 \mid H_0 \text{ is False})$$
-$$=P(Z_0 \leq Z_\alpha \mid r > r_0) = P(\frac{atanh(r') - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha)$$
-$$= P(\frac{atanh(r') - atanh(r)}{\sqrt{n-3}} + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}} \leq Z_\alpha)$$
-$$= P(Z \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
-$$= P(Norm(0,1) \leq Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
-$$= \Phi(Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}})$$
+$$=P(Z_0 \leq Z_\alpha \mid r > r_0) = P(\frac{atanh(r') - atanh(r_0)}{1/\sqrt{n-3}} \leq Z_\alpha)$$
+$$= P(\frac{atanh(r') - atanh(r)}{1/\sqrt{n-3}} + \frac{atanh(r) - atanh(r_0)}{1/\sqrt{n-3}} \leq Z_\alpha)$$
+$$= P(Z \leq Z_\alpha - \frac{atanh(r) - atanh(r_0)}{1/\sqrt{n-3}})$$
+$$= P(Norm(0,1) \leq Z_\alpha - \frac{atanh(r) - atanh(r_0)}{1/\sqrt{n-3}})$$
+$$= \Phi(Z_\alpha - \frac{atanh(r) - atanh(r_0)}{1/\sqrt{n-3}})$$
 
 Given by the Fisher's z-transformation where $atanh(r') = \frac{1}{2}\ln(\frac{1+r'}{1-r'})$ is normally distributed with mean $atanh(r)$ and variance $\frac{1}{n-3}$. We can then say:
-$$-Z_\beta = \Phi^{-1}(\beta) = Z_\alpha + \frac{atanh(r) - atanh(r_0)}{\sqrt{n-3}}$$
+$$-Z_\beta = \Phi^{-1}(\beta) = Z_\alpha - \frac{atanh(r) - atanh(r_0)}{1/\sqrt{n-3}}$$
 $$\Phi(Z) = P(Norm(0,1)\leq Z) \text{ as the 1-pth quantile } Z_p \equiv \Phi^{-1}(1-p)$$
 
 After re-arranging, we are left with:
