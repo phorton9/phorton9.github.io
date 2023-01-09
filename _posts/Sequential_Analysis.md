@@ -26,3 +26,6 @@ In this case, $t_\alpha$ and $t_\beta$ are dynamic and will update as you take m
 <p align="center">
   <br/><img src='/images/Sequence.png' width="300" alt="alt attribute goes here!" title="Sequential Test">
 </p>
+
+
+https://github.com/phorton9/BlogCode/blob/main/SequentialAnalysis.R
