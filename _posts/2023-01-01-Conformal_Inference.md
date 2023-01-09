@@ -7,7 +7,7 @@ tags:
   - Prediction Interval
   - Machine Learning
 ---
-You are driving down the road during a thunderstorm. Your windshield wipers are old so it is difficult to see but you notice a sign in the distance. The color is not distinct and the shape in not clear through the rain. You decide to slow down because of the wet conditions and the uncertainty around the sign. As you approach, the red octagon becomes clear as do the other cars in the intersection. Fortunately, you used your uncertainty to guide your decision to be cautious so there was no accident. It is the uncertainty that helps a decision maker take the best action and this is why quanitfying uncertainty has value for machine learning.
+You are driving down the road during a thunderstorm. Your windshield wipers are old so it is difficult to see but you notice a sign in the distance. The color is not distinct and the shape is unclear through the rain. You decide to slow down because of the wet conditions and the uncertainty around the sign. As you approach, the red octagon becomes clear as do the other cars in the intersection. Fortunately, you used your uncertainty to guide your decision to be cautious so there was no accident. It is uncertainty (or confidence) that helps a decision maker take the best action and this is why quanitfying uncertainty has value for machine learning.
 
 Decision making is built around uncertainty. You may be willing to undergo a surgical procedure if the doctor is confident in the diagnosis. If the doctor expresses more uncertainty, you may find the risk is not work taking and opt for other treatments. However, typically you will see output of predictive models as only a scalar value for regression or single class for a categorical problem. You might see the classification of an image as either "Cat" or "Dog". For binary classification, you can select a loss function to give a continuous value from 0-1 as a proxy for the confidence. Even linear regression models methods for prediction intervals. Now, conformal inference has emerged as a method for quantifying uncertainty without any restrictions on the distribution of data or the underlying model. In this post, I will describe why this is a promising application for statistical decision theory.
 
@@ -30,7 +30,7 @@ Here, X is Uniform(1,5), both $\epsilon_{1,i}$ and $\epsilon_{2,i}$ are Normal(0
   <br/><img src='/images/DistributionWPI.png' width="300" alt="alt attribute goes here!" title="Calibration Data with Prediction Interval">
 </p>
 
-As outlined <a href="http://people.eecs.berkeley.edu/~angelopoulos/publications/downloads/gentle_intro_conformal_dfuq.pdf">here in section 3.3</a>, there are procedures for validating the correct implementation. One of which is take a number of trials and find the mean coverage value. I ran 100 trials and had an average coverage of 90.1% along with the following histogram of results which is roughly centered around  
+As outlined <a href="http://people.eecs.berkeley.edu/~angelopoulos/publications/downloads/gentle_intro_conformal_dfuq.pdf">here in section 3.3</a>, there are procedures for validating the correct implementation. One of which is take a number of trials and find the mean coverage value. I ran 100 trials and had an average coverage of 90.1% along with the following histogram of results where the percent outside the coverage interval roughly centered around 10%.
 
 <p align="center">
   <br/><img src='/images/coverageHist.png' width="300" alt="alt attribute goes here!" title="Histogram of Coverage Results">
