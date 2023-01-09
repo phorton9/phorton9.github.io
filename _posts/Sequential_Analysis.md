@@ -22,3 +22,7 @@ $$v \equiv \frac{(\frac{S_{x}^2}{n} + \frac{S_{y}^2}{m})^2}{\frac{(S_{x}^2 / n)^
 In this case, $t_\alpha$ and $t_\beta$ are dynamic and will update as you take more observations. You would also need at least $n\geq2$ and $m\geq2$ before being able to calculate this. Simpler alternatives to this method would be to assume that either:
 1) The variance $\sigma$ is already known and will not change from the experiment
 2) There are equal variances between the groups $\sigma_x = \sigma_y$
+
+<p align="center">
+  <br/><img src='/images/Sequence.png' width="300" alt="alt attribute goes here!" title="Sequential Test">
+</p>
