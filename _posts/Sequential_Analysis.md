@@ -11,7 +11,7 @@ Sequential analysis is not a new topic but it is experiencing a renaissance with
 
 If you need a refresher on hypothesis testing, I suggest you review this <a href="https://www.youtube.com/watch?v=VK-rnA3-41c">video</a>. Otherwise, I will assume you have a foundational knowledge of hypothesis testing.
 
-Consider the scenario where an app developer (ADev) wants to experiment with a new feature to increase in-app purchases. Assume they can track the frequency of visits and amount purchased to calculate a metric Average Purchases per Visit (APV). The engineers decide to configure the experiment to show the new feature to a random 50% of the users while the remaining will continue to see the previous version. The team wants to show that the new feature improves APV and thus structures the hypothesis test as:
+Consider the scenario where an app developer (ADev) wants to experiment with a new feature to increase in-app purchases. Assume they can track the frequency of visits and amount purchased to calculate a metric Average Purchases per Visit (APV). The engineers decide to configure the experiment to show the new feature to a random selection of the users while the remaining will continue to see the previous version. Not all the users will login to see the feature at once so data will continue to stream in with the results. The team wants to show that the new feature improves APV and thus structures the hypothesis test as:
 $$h_0: \mu_x \leq \mu_y$$
 $$h_1: \mu_x > \mu_y$$
 Here, the null hypothesis is that the feature has a negative or no effect on the the APV while the alternative hypothesis is that the feature improves APV. It is recognized that there are risks associated with making the wrong decision using statistical hypothesis testing. We will assume that the company is willing to accept a type I error rate of $\alpha = 0.05$ and type II error rate of $\beta = 0.05$.
@@ -33,4 +33,4 @@ For an example, I simulated data to replicate this scenario. I generated data fo
 
 If you are interested in the code for the simulation, you can find it here: https://github.com/phorton9/BlogCode/blob/main/SequentialAnalysis.R
 
-This <a href="https://www.amazon.com/Sequential-Analysis-Abraham-Wald/dp/0486615790">book</a> is a great resource to learn more about Sequential Analysis. 
+This <a href="https://www.amazon.com/Sequential-Analysis-Abraham-Wald/dp/0486615790">book</a> is also a great resource to learn more about Sequential Analysis. 
