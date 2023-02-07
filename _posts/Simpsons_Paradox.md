@@ -43,16 +43,14 @@ $$
 \end{bmatrix}
 $$
 
-One question that you might consider after the previous example is: What can you do to correct it? If you have read one of the other posts about sample size estimation, you will recall the effect that standardization has on the correlations of combined samples. 
+One question that you might consider after the previous example is: What can you do to correct it? If you have read one of the other posts about sample size estimation, you will recall the effect that standardization has on the correlations of combined samples. For this example, we will standardize the subgroups independent of the other.
 
 <p align="center">
   <br/><img src='/images/Standardized.png' width="300" alt="alt attribute goes here!" title="Simpson's Paradox for Correlations">
 </p>
 
-With distance measurements, such as the distance from the sample mean or distance from the nearest neighbors in KNN, it is important to 
+After standardization, the combined sample correlation is $\rho_{combined} = -0.7$ which the average of the correlations of the subgroups. With distance measurements, such as the distance from the sample mean in this example or distance from the nearest neighbors in KNN, it is important to consider standardizing your data. 
 
 Another example of this phenomenon is the  <a href="https://homepage.stat.uiowa.edu/~mbognar/1030/Bickel-Berkeley.pdf ">paper on gender bias in admissions at UC Berkeley</a>. When compared strictly on the basis of gender, the authors found that women had a lower acceptance rate than men. However, when the authors divided the admissions data into departments, they found that women were more likely to apply to departments with lower average admission rates. This fact dragged on the overall admission rate for women and refuted the notion that women were being discriminated against.
-
-One concept that this leads to is the importance of standardization. 
 
 For more information <a href="https://plato.stanford.edu/entries/paradox-simpson/">link</a>
