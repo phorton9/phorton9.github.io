@@ -1,7 +1,7 @@
 ---
 title: 'Correlation and Sample Size Estimation'
 date: 2022-12-27
-permalink: /posts/2022/12/NewPost/
+permalink: /posts/2022/12/SampleSize/
 tags:
   - Correlation
   - Sample Size
